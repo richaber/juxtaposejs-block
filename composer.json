@@ -1,0 +1,41 @@
+{
+    "name": "richaber/juxtaposejs-block",
+    "description": "Dev Plugins",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Richard Aber",
+            "email": "richaber@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {},
+    "config": {
+        "sort-packages": true
+    },
+    "require": {},
+    "require-dev": {
+        "codeception/module-asserts": "^1.0",
+        "codeception/module-cli": "^1.0",
+        "codeception/module-db": "^1.0",
+        "codeception/module-filesystem": "^1.0",
+        "codeception/module-phpbrowser": "^1.0",
+        "codeception/module-webdriver": "^1.0",
+        "codeception/util-universalframework": "^1.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "humanmade/psalm-plugin-wordpress": "dev-master",
+        "lucatume/wp-browser": "^2.4",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpmd/phpmd": "^2.10",
+        "phpstan/extension-installer": "^1.1",
+        "szepeviktor/phpstan-wordpress": "^1.0",
+        "vimeo/psalm": "4.3.2",
+        "wp-cli/wp-cli-bundle": "^2.5",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "suggest": {},
+    "extra": {
+        "installer-name": "juxtaposejs-block"
+	}
+}

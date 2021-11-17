@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "richaber/juxtaposejs-block",
+	"keywords": [ "image", "slider", "diff", "juxtapose" ],
+	"version": "0.1.0",
+	"title": "JuxtaposeJS Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Before and after image slider block built with JuxtaposeJS.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "juxtaposejs-block",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
