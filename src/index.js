@@ -19,6 +19,7 @@ import './style.scss';
  */
 import Edit from './edit';
 import save from './save';
+import BlockAttributes from './blockattributes';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -28,28 +29,7 @@ import save from './save';
 registerBlockType(
 	'richaber/juxtaposejs-block',
 	{
-		attributes: {
-			leftId: {
-				type: 'number',
-				attribute: 'data-leftid'
-			},
-			leftUrl: {
-				type: 'string',
-				source: 'attribute',
-				selector: '.leftimg',
-				attribute: 'src',
-			},
-			rightId: {
-				type: 'number',
-				attribute: 'data-rightid'
-			},
-			rightUrl: {
-				type: 'string',
-				source: 'attribute',
-				selector: '.rightimg',
-				attribute: 'src',
-			}
-		},
+		attributes: BlockAttributes,
 
 		/**
 		 * @see ./edit.js
