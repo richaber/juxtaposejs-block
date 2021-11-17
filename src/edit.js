@@ -79,7 +79,7 @@ export default function Edit({attributes, setAttributes, isSelected}) {
 						value={attributes.leftId}
 						render={({open}) => (
 							<Button onClick={open}>
-								{__('Select Image 1', 'cubed')}
+								{__('Select Image 1', 'juxtaposejs-block')}
 							</Button>
 						)}
 					/>
@@ -117,7 +117,7 @@ export default function Edit({attributes, setAttributes, isSelected}) {
 						value={attributes.rightId}
 						render={({open}) => (
 							<Button onClick={open}>
-								{__('Select Image 2', 'cubed')}
+								{__('Select Image 2', 'juxtaposejs-block')}
 							</Button>
 						)}
 					/>
