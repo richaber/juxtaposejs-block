@@ -13,6 +13,9 @@
  * @package           RichAber\JuxtaposeJSBlock
  */
 
+define( 'RICHABER_JUXTAPOSEJS_DIR', __DIR__ );
+define( 'RICHABER_JUXTAPOSEJS_FILE', __FILE__ );
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it also registers all assets, so they can be enqueued
@@ -26,3 +29,30 @@ function richaber_juxtaposejs_block_init() {
 }
 
 add_action( 'init', 'richaber_juxtaposejs_block_init' );
+
+/**
+ * Enqueue frontend block assets.
+ */
+function richaber_juxtaposejs_block_scripts() {
+
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	$url = plugin_dir_url( RICHABER_JUXTAPOSEJS_FILE );
+
+	wp_enqueue_style(
+		'juxtapose',
+		$url . '/build/juxtaposejs/build/css/juxtapose.css',
+		[],
+		'1.1.6'
+	);
+
+	wp_enqueue_script(
+		'juxtapose',
+		$url . '/build/juxtaposejs/build/js/juxtapose' . $suffix . '.js',
+		[],
+		'1.1.6',
+		true
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'richaber_juxtaposejs_block_scripts' );
